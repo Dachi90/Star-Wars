@@ -52,18 +52,23 @@ function imprimir (){
 
 function info (indice){
 	
-	document.getElementById("contenedor").style.display = "none"
-	document.getElementById("info").style.display = "block"
+	// document.getElementById("contenedor").style.display = "none"
+	// document.getElementById("info").style.display = "block"
 
 	document.getElementById("infoImg").innerHTML ="<img src="+datos[indice][1]+">"
 
 	console.log(indice);
 	document.getElementById("tabla").innerHTML = "<tr><td>"+film.results[indice].director+"</td><td>"+film.results[indice].title+"</td><td>"+film.results[indice].release_date+"</td><td>"+film.results[indice].opening_crawl+"</td></tr>"
-
+toggle();
 }
 
 function back(){
-	document.getElementById("info").style.display = "none"
-	document.getElementById("contenedor").style.display = "block"
+	$("#info").hide(1000);
+	$("#contenedor").show(2000);
 }
 
+function toggle (){
+
+        $("#contenedor").fadeOut(1000);    
+        $("#info").fadeIn(2000);
+}
