@@ -25,9 +25,9 @@ function imprimir (){
 		if( i == 0){
 			salida+= '<div class="row">';
 		} else if( (i % 4) == 0){
-			salida += '</div> <div class="row mt-2">';
+			salida += '</div> <div class="row">';
 		}
-		salida+='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes"><h3 class="text-center titles" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div>';
+		salida+='<div class="col-md-6 col-lg-3 text-center contenedorCss mb-3" ><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div></div>';
 	};
 	if (i!=0){
 		salida += "</div>";
@@ -69,7 +69,7 @@ function search(){
 			salida += '</div> <div class="row mt-2">';
 			}
 
-				salida +='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes"><h3 class="text-primary text-center" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div>';
+				salida +='<div class="col-md-6 col-lg-3 text-center contenedorCss"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div></div>';
 			console.log("prueba");
 		}
 		if (i!=0){
@@ -85,7 +85,7 @@ function search(){
 // Función para mostrar la tabla de información de cada película
 function info (indice){
 	
-	document.getElementById("infoImg").innerHTML ="<img src="+film[indice].imagen+">"
+	document.getElementById("infoImg").innerHTML ="<img src="+film[indice].imagen+" class='img-rounded imagenes '>"
 
 	console.log(indice);
 	document.getElementById("tabla").innerHTML = "<tr><td>"+film[indice].director+"</td><td>"+film[indice].title+"</td><td>"+film[indice].release_date+"</td><td>"+film[indice].opening_crawl+"</td></tr>"
