@@ -8,14 +8,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
+	<div class="fondo">
 	<header>
 			<div class="row">	
 				<div class="col-4">
-					<button class="btn btn-success" onclick="back()"> Home</button>
+					<button class="btn btn-outline-secondary" onclick="back()"> <i class="material-icons">home</i></button>
 				</div>
 				<div class="col-4">
 					<h1 class="title text-center">STAR WARS FILMS</h1>
@@ -24,7 +26,7 @@
 				</div>
 			</div>
 		
-		<div id="carouselExampleIndicators" class="carousel slide mt-2 mb-5" data-ride="carousel">
+		<div id="carouselExampleIndicators" class="carousel slide mt-2 mb-2" data-ride="carousel">
   			<ol class="carousel-indicators">
     			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -53,9 +55,10 @@
 		
 	</header>
 
+	
 	<section class="text-center mb-3">
 		<input type="text" id="search">
-		<button onclick="search()">Search</button>
+		<button onclick="search()" id="buscador" class=" btn btn-sm btn-outline-success"><i class="material-icons">search</i></button>
 	</section>
 	
 	<section id="contenedor" class="container">
@@ -67,14 +70,14 @@
 		
 	</section>
 
-	<section id="info">
-		<div class="row container">
+	<section id="info" >
+		<div class="row container-fluid">
 
 			<div class="col-4" id="infoImg"></div>
 
 			<div class="col-8">
 				<table class="table table-hover">
-					<thead class="thead-inverse">
+					<thead class="thead-inverse titles">
 						<tr>
 							<th>Director</th>
 							<th>Title</th>
@@ -82,16 +85,16 @@
 							<th>Sinopsis</th>
 						</tr>
 					</thead>
-					<tbody id="tabla">
+					<tbody id="tabla" class="tbody">
 						
 					</tbody>
 				</table>
 			</div>
 			
 		</div>
-		<button onclick="back()" class="btn btn-danger mt-2"> Back</button>
+		<button onclick="back()" class="btn btn-danger mt-2"> <i class="material-icons">reply_all</i> </button>
 	</section>
-
+	</div>
 
 	<script src="js/script2.js"></script>
 </body>

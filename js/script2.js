@@ -45,7 +45,7 @@ function imprimir (){
 			salida += '</div> <div class="row mt-2">';
 		}
 
-		salida+='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes"><h3 class="text-primary text-center" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-primary active btn-default" onclick= info('+i+')>+ Info</button></div>';
+		salida+='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes"><h3 class="text-center titles" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div>';
 		
 	
 	};
@@ -90,7 +90,7 @@ function search(){
 			salida += '</div> <div class="row mt-2">';
 			}
 
-				salida +='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes"><h3 class="text-primary text-center" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-primary active btn-default" onclick= info('+i+')>+ Info</button></div>';
+				salida +='<div class="col-md-6 col-lg-3 text-center" style="height:30em"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes"><h3 class="text-primary text-center" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div>';
 			console.log("prueba");
 		}
 		if (i!=0){
@@ -115,6 +115,14 @@ function info (indice){
 	document.getElementById("tabla").innerHTML = "<tr><td>"+film[indice].director+"</td><td>"+film[indice].title+"</td><td>"+film[indice].release_date+"</td><td>"+film[indice].opening_crawl+"</td></tr>"
 toggle();
 }
+
+
+	$("#search").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#buscador").click();
+    }
+	});
+
 
 function back(){
 	$("#info").hide(1000);

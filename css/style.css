@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto+Mono');
 
 img {
 	width: 100%;
@@ -11,4 +11,20 @@ img {
 
 .title {
 	font-family: Righteous;
+	color: #F2F2F2;
+	text-shadow: 2px 2px #848484;
+}
+
+.titles {
+	font-family: Roboto Mono;
+	color:#E6E6E6;
+}
+
+.tbody{
+	color:#E6E6E6;
+}
+
+.fondo {
+	 background: url("../img/fondo.jpg") no-repeat center center fixed;
+
 }
