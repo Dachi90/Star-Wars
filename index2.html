@@ -10,21 +10,28 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div class="fondo">
 	<header>
-			<div class="row">	
+			
+			<div class="row w3-border w3-round w3-black	w3-top">	
 				<div class="col-4">
-					<button class="btn btn-outline-secondary" onclick="back()"> <i class="material-icons">home</i></button>
+					<button class="btn btn-outline-success" onclick="back()"> <i class="material-icons">home</i></button>
 				</div>
 				<div class="col-4">
 					<h1 class="title text-center">STAR WARS FILMS</h1>
 				</div>
-				<div class="col-4">
+				<div class="col-3 text-right padding">	
+							<input type="text" class="input text-center" id="search"  placeholder="Search your film">	
 				</div>
-			</div>
+				<div class="col-1 text-center padding">
+					<button onclick="search()" id="buscador" class=" btn btn-sm btn-outline-success"><i class="material-icons">search</i></button>
+				</div>
+			</div>	
+			
 		
 		<div id="carouselExampleIndicators" class="carousel slide mt-2 mb-2" data-ride="carousel">
   			<ol class="carousel-indicators">
@@ -57,8 +64,7 @@
 
 	
 	<section class="text-center mb-4 mt-4">
-		<input type="text" id="search" placeholder="Search your film">
-		<button onclick="search()" id="buscador" class=" btn btn-sm btn-outline-success"><i class="material-icons">search</i></button>
+		
 	</section>
 	
 	<section id="contenedor" class="container">
