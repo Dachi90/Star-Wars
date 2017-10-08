@@ -27,7 +27,7 @@ function imprimir (){
 		} else if( (i % 4) == 0){
 			salida += '</div> <div class="row">';
 		}
-		salida+='<div class="col-12 col-sm-6 col-md-3  text-center contenedorCss mb-3" ><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success mt-5" onclick= info('+i+')>+ Info</button></div></div>';
+		salida+='<div class="col-12 col-sm-6 col-md-3  text-center contenedorCss mb-3 mt-5" ><img alt="Star Wars film" src='+film[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+film[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success mt-5 botonInfo" onclick= info(film,'+i+')>+ Info</button></div></div>';
 	};
 	if (i!=0){
 		salida += "</div>";
@@ -65,7 +65,6 @@ function search(){
 		
 		salida ="";
 		for(i=0; i < pelicula.length; i++){
-			// var texto = pelicula[i].title.toLowerCase();
 			if( i == 0){
 			salida+= '<div class="row">';
 			}
@@ -73,8 +72,8 @@ function search(){
 			salida += '</div> <div class="row mt-2">';
 			}
 
-				salida +='<div class="col-12 col-sm-6 col-md-3 text-center contenedorCss"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success" onclick= info('+i+')>+ Info</button></div></div>';
-			console.log("prueba");
+				salida +='<div class="col-12 col-sm-6 col-md-3 text-center contenedorCss mt-5 mb-3"><img alt="Star Wars film" src='+pelicula[i].imagen+' class="img-rounded imagenes image" style="width:100%"><div class="middle"><h3 class="text-center titles text" style="height:2em">'+pelicula[i].title+'</h3><button id="boton" type="button" class="btn btn-outline-success mt-5 botonInfo" onclick= info(pelicula,'+i+')>+ Info</button></div></div>';
+				console.log(i);
 		}
 		if (i!=0){
 		salida += "</div>";
@@ -88,12 +87,12 @@ function search(){
 }
 
 // Función para mostrar la tabla de información de cada película
-function info (indice){
+function info (array, indice){
 	
-	document.getElementById("infoImg").innerHTML ="<img src="+film[indice].imagen+" class='img-rounded imagenes '>"
+	document.getElementById("infoImg").innerHTML ="<img src="+array[indice].imagen+" class='img-rounded imagenes '>"
 
 	console.log(indice);
-	document.getElementById("tabla").innerHTML = "<tr><td>"+film[indice].director+"</td><td>"+film[indice].title+"</td><td>"+film[indice].release_date+"</td><td>"+film[indice].opening_crawl+"</td></tr>"
+	document.getElementById("tabla").innerHTML = "<tr><td>"+array[indice].director+"</td><td>"+array[indice].title+"</td><td>"+array[indice].release_date+"</td><td>"+array[indice].opening_crawl+"</td></tr>"
 toggle();
 }
 
