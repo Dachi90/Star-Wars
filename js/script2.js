@@ -51,10 +51,14 @@ function search(){
 		});
 		 console.log(pelicula)
 		if(busqueda == ""){
+		document.getElementById("search").style.background = "white";	
 		$("#contenedor").show();
 		$("#info").hide();
 		$("#filmSearch").hide();
-	}else {
+		}else if(pelicula.length==0){
+			document.getElementById("search").style.background = "#FE2E2E";
+		}else {
+			document.getElementById("search").style.background = "white";
 		$("#contenedor").hide();
 		$("#info").hide();
 		$("#filmSearch").show();

@@ -80,7 +80,10 @@ body {
 }
 
 .contenedorCss:hover .image {
-  opacity: 0.3;
+  opacity: 0.8;
+  border:solid #64FE2E;
+  /*-webkit-filter:contrast(10%);
+  filter:contrast(10%);*/
 }
 
 .contenedorCss:hover .middle {
@@ -89,7 +92,7 @@ body {
 
 .text {
   /*background-color: #4CAF50*/;
-  color: white;
+  color: #40FF00;
   font-size: 16px;
   /*padding: 16px 32px;*/
 }
