@@ -19,18 +19,17 @@
 	<header>
 			
 			<div class="row w3-border w3-round w3-black	w3-top">	
-				<div class="col-4">
+				<div class="col-md-4 col-sm-2 col-2">
 					<button class="btn btn-outline-success" onclick="back()"> <i class="material-icons">home</i></button>
 				</div>
-				<div class="col-4">
+				<div id="title" class="col-4">
 					<h1 class="title text-center">STAR WARS FILMS</h1>
 				</div>
-				<div class="col-3 text-right padding">	
-							<input type="text" class="input text-center" id="search"  placeholder="Search your film">	
+				<div class="col-md-4 col-sm-10 col-10 text-right padding">	
+							<input type="text" class="input text-center" id="search"  placeholder="Search your film">
+							<button onclick="search()" id="buscador" class=" btn btn-sm btn-outline-success"><i class="material-icons">search</i></button>	
 				</div>
-				<div class="col-1 text-center padding">
-					<button onclick="search()" id="buscador" class=" btn btn-sm btn-outline-success"><i class="material-icons">search</i></button>
-				</div>
+				
 			</div>	
 			
 		
