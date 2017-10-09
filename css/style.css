@@ -99,6 +99,9 @@ margin:0;
 .contenedorCss:hover .image {
   opacity: 0.5;
   border:solid #64FE2E;
+  border-radius: 2rem;
+  -moz-transform:scale(1.2);
+  -webkit-transform:scale(1.2);
   /*-webkit-filter:contrast(10%);
   filter:contrast(10%);*/
 }
