@@ -69,6 +69,10 @@ margin:0;
 
 .fondo {
 	 background: url("../img/fondo.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
 
 }
 
@@ -100,8 +104,8 @@ margin:0;
   opacity: 0.5;
   border:solid #64FE2E;
   border-radius: 2rem;
-  -moz-transform:scale(1.2);
-  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
   /*-webkit-filter:contrast(10%);
   filter:contrast(10%);*/
 }
