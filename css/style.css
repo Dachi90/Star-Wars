@@ -1,122 +1,117 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous|Roboto+Mono');
 body {
-
 	padding-top: 2%;
-
-
-}
-#info {
-	display: none;
 }
 
+/*Estilos del header */
 #search{
 	width: 50%;
 }
-.botonInfo {
-  color:#FFFF00;
-  font-weight: bolder;
-}
-
 .w3-top{  
 margin:0;
 }
-
 .input{
 	border-radius: 32px;
 	border:none;
 	margin-top: 0.5em;
-
 }
-
 .padding{
 	padding: 0;
 }
-
 .slide{
 	/*width: 100%;*/
 	height: 40em;
   margin: 0;
 }
-
-.imagenes{
-	width: 100%;
-	height: 20em;
-}
-
 .title {
-	font-family: Righteous;
-	color: #F2F2F2;
-	text-shadow: 2px 2px #848484;
-	font-size: 2em
+  font-family: Righteous;
+  color: #F2F2F2;
+  text-shadow: 2px 2px #848484;
+  font-size: 2em
 }
-@media only screen and (max-width: 767px){
-  #title{
-    display: none;
+  /*Estilos para menos de 767px de ancho*/
+  @media only screen and (max-width: 767px){
+    #title{
+      display: none;
+    }
+    #carouselExampleIndicators{
+      display:none;
+    }
   }
-  #carouselExampleIndicators{
-    display:none;
-  }
-}
+  /*Final de estilos para dispositivos de menos de 767px*/
+/*Final de estilos del header*/
 
-.titles {
-	font-family: Roboto Mono;
-	color:#E6E6E6;
-}
 
-.tbody{
-	color:#E6E6E6;
-}
-
+/*Estilos para las sections de #contenedor #filmSeach y #info*/
 .fondo {
-	 background: url("../img/fondo.jpg") no-repeat center center fixed;
+   background: url("../img/fondo.jpg") no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
 
 }
-
-.contenedorCss {
-    position: relative;
-    width: 50%;
+#info {
+  display: none;
+}
+.botonInfo {
+  color:#FFFF00;
+  font-weight: bolder;
+}
+.imagenes{
+	width: 100%;
+	height: 20em;
+}
+.titles {
+	font-family: Roboto Mono;
+	color:#E6E6E6;
+}
+.tbody{
+	color:#E6E6E6;
 }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  /*height: auto;*/
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
+    /*Estilos para las portadas de las péliculas*/
+    .contenedorCss {
+        position: relative;
+        width: 50%;
+    }
 
-.contenedorCss:hover .image {
-  opacity: 0.5;
-  border:solid #64FE2E;
-  border-radius: 2rem;
-  -moz-transform:scale(1.1);
-  -webkit-transform:scale(1.1);
-  /*-webkit-filter:contrast(10%);
-  filter:contrast(10%);*/
-}
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      /*height: auto;*/
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
 
-.contenedorCss:hover .middle {
-  opacity: 1;
-}
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
 
-.text {
-  /*background-color: #4CAF50*/;
-  color: #40FF00;
-  font-size: 16px;
-  /*padding: 16px 32px;*/
-}
+    .contenedorCss:hover .image {
+      opacity: 0.5;
+      border:solid #64FE2E;
+      border-radius: 2rem;
+      -moz-transform:scale(1.1);
+      -webkit-transform:scale(1.1);
+    }
+
+    .contenedorCss:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      color: #40FF00;
+      font-size: 16px;
+    }
+    /*Fin de estilos para las portadas de las péliculas*/
+
+/*Fin de estilos para las sections de #contenedor #filmSeach y #info*/
